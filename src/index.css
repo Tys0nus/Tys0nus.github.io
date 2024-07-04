@@ -1,68 +1,326 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  --bg: #F0DBA5;
+  --text: #151515;
+  --yellow: #EDB74D;
+  --red: #EB6666;
+  --green: #6FB18A;
 }
 
 body {
+  font-family: "Recoleta";
   margin: 0;
+  padding: 0;
+  height: 100vh;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: transparent; /* Change this from var(--bg) to transparent */
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+body::before {
+  background: transparent; /* Change this from #8C8C8C to transparent */
+  filter: none; /* Remove the noise filter */
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+
+.container {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  text-align: left;
+  width: 600px; /* Adjust the width as needed */
+  position: relative; /* Add this */
+}
+
+.profile-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Add this */
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.container h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.profile-info p {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.profile-info i {
+  margin-right: 10px;
+}
+
+.profile-description {
+  text-align: left;
+  clear: both;
+  margin-top: 10px; /* Adjust as needed */
+  width: 100%; /* Add this */
+}
+
+.separator {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 10px 0; /* Adjust as needed */
+  height: 0; /* Ensures no extra space is taken */
+}
+
+.profile-pic {
+  margin-left: 20px;
+  border-radius: 45px; /* Square with rounded edges */
+  width: 150px; /* Adjust size as needed */
+  height: 150px; /* Ensure height matches width for square shape */
+  object-fit: cover; /* Ensure image covers the container properly */
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.buttons a {
+  display: inline-block;
+  position: relative;
+  padding: 10px 20px;
   font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  color: var(--text);
+  text-decoration: none;
+  border: 2px solid var(--text);
+  border-radius: 25px;
+  background: transparent; /* This makes the button transparent */
+  transition: background 0.3s ease, color 0.3s ease;
+  overflow: hidden;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.buttons a:hover {
+  background: #c5bebe; /* This makes the button black on hover */
+  opacity: 0.8;
+}
+
+/* Ripple effect */
+.buttons a::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.4);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform 0.5s ease, opacity 1s ease;
+}
+
+.buttons a:active::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+}
+
+/* Ripple animation */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(0);
+  animation: ripple-animation 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple-animation {
+  to {
+      transform: scale(4);
+      opacity: 0;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+
+.blob-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  /* right: -150px; */
+}
+
+.blob {
+  border-radius: 100px;
+  filter: blur(60px);
+}
+
+.yellow {
+  background-color: var(--yellow);
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  height: 200px;
+  width: 200px;
+  animation: yellow 8s infinite ease;
+}
+
+.green {
+  background-color: var(--green);
+  position: absolute;
+  top: 80px;
+  right: -20px;
+  height: 200px;
+  width: 250px;
+  animation: green 8s infinite ease;
+}
+
+.red {
+  background-color: var(--red);
+  position: absolute;
+  right: 0;
+  top: 300px;
+  height: 250px;
+  width: 200px;
+  animation: red 8s infinite linear;
+}
+
+@keyframes yellow {
+  0% {top: 200px; left: 100px; transform: scale(1);}
+  30% {top: 300px; left: 150px; transform: scale(1.2);}
+  60% {top: 100px; left: 200px; transform: scale(1.3);}
+  100% {top: 200px; left: 100px; transform: scale(1);}
+}
+
+@keyframes green {
+  0% {top: 80px; right: -20px; transform: scale(1.2);}
+  30% {top: 300px; right: -20px;transform: scale(1);}
+  60% {top: 200px; right: 100px;transform: scale(1);}
+  100% {top: 80px; right: -20px; transform: scale(1.2);}
+}
+
+@keyframes red {
+  0% {top: 250px; right: 0px; transform: scale(1);}
+  30% {top: 150px; right: 150px;transform: scale(1.4);}
+  60% {top: 250px; right: 100px;transform: scale(1);}
+  100% {top: 250px; right: 0px; transform: scale(1);}
+}
+
+svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3; /* Ensure it is behind the blobs and the container */
+}
+
+/* Chat styles */
+.output {
+  position: fixed; /* Add this */
+  bottom: calc(10px + 40px + 10px); /* Add this - adjust as needed */
+  left: 50%; /* Add this */
+  transform: translateX(-50%); /* Add this */
+  width: 90%; 
+  max-width: 600px; 
+  height: 50px;
+  border-radius: 15px;
+  padding: 10px 20px;
+  border: 2px solid var(--text);
+  resize: none;
+  font-size: 1em;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1000; /* Add this */
+}
+
+.chat-container {
+  position: fixed;
+  bottom: 10px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%; 
+  max-width: 600px; 
+  padding: 10px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  z-index: 999; /* Adjust this */
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align items on opposite ends */
+  gap: 10px;
+  position: relative; /* Establish a new positioning context */
+}
+
+.input {
+  width: calc(100%); /* Reduce width to make room for the button */
+  height: 10px;
+  border-radius: 25px;
+  padding: 10px calc(20px + 50px) 20px 10px;
+  border: 2px solid var(--text);
+  resize: none;
+  font-size: 1em;
+  overflow: hidden;
+}
+
+.ask-button {
+  position: absolute; /* Position the button absolutely */
+  right: 7px; /* Position it 10px from the right edge of the input-container */
+  padding: 5px 5px 5px 5px;
+  font-size: 1em;
+  color: var(--text);
+  text-decoration: none;
+  border: 2px solid var(--text);
+  border-radius: 25px;
+  background: transparent; 
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.ask-button:hover {
+  background: #c5bebe;
+  opacity: 0.8;
+}
+
+/* Error message styles */
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Progress bar container */
+.progress-bars-container {
+  position: fixed;
+  bottom: calc(10px + 40px + 10px + 90px); /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+  text-align: center;
+}
+
+.disclaimer {
+  position: fixed;
+  bottom: -10px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%; 
+  max-width: 600px; 
+  padding: 10px;
+  color:#110f0b;
+
+  text-align: center;
+  z-index: 1000; /* Adjust this */
 }
