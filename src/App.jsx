@@ -137,7 +137,7 @@ function App() {
           </div>
       </div>
 
-      <textarea className="output" value={output} rows={2} readOnly placeholder="Electra on standby..."></textarea>
+      <textarea className="output" value={output} rows={2} readOnly placeholder="Electra on standby... Fire away your questions or try a sample query!"></textarea>
 
       <div className="chat-container">
               <div className="input-container">
