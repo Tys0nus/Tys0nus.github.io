@@ -1,0 +1,15 @@
+Aditya Chaugule is a highly skilled Robotics Engineer with a Master of Engineering in Robotics from the University of Maryland. His academic journey began in Pune, India, where he earned a B.S. in Mechanical Engineering from Savitribai Phule Pune University. During his undergraduate studies, he worked on a capstone project focused on the design, analysis, and development of a connecting rod for a V12 internal combustion engine.
+
+In his master’s program at the University of Maryland, Aditya specialized in several areas of robotics, including cognitive robotics, rehabilitation robotics, natural language processing (NLP), visual learning and recognition, and perception-planning-control of robotic systems. His academic performance was exemplary, earning him a GPA of 3.63 out of 4.0.
+
+Aditya has a strong set of skills in both engineering and computing. In engineering, his expertise includes robotics, control systems, mechanical design, documentation, FMEA, Solidworks, Ansys, and MSC Adams. In computing, he is proficient in deep learning, computer vision, Pytorch, ROS, MATLAB, Python, C++, Linux, and MS Office.
+
+He holds two notable certifications. He is a Lean Six Sigma Green Belt, a certification he earned with an excellent grade and is accredited by ASCB(E) Ltd. He also holds a Solidworks Mechanical Design certification at the expert level (CSWE) from Dassault Systems.
+
+Aditya has worked on several impressive projects. These include designing a teleoperated Quadruped Spider robot, developing a simulation of a fatigue-driven muscle-reflex exoskeleton, creating a Rapidly-exploring Random Trees (RRT) path planning algorithm, and designing output feedback controllers for a dual pendulum cart system. He also worked on path planning and navigation for a TurtleBot 3 Burger robot and developed an odometry package for a turtlebot.
+
+In terms of professional experience, Aditya interned as a Robotics Engineer at Kick Robotics in Maryland, USA. During his internship, he validated a custom software package for SLAM and autonomous navigation, which improved navigation accuracy by 20%. He also deployed a waypoint-driven autonomous navigation robot, enhancing the client’s warehouse monitoring capability.
+
+Aditya has also held leadership roles. He was the Lead of the Virtual Dynamics Event Division at BAJA SAEINDIA in India and the Team Captain of Resonance Racing in Pune, India. In these roles, he conducted training sessions, administered validation events, led team reviews, directed budgets, and regulated administrative functions. His amazing work building an offroad all-terrain vehicle can be seen in the Youtube video linked: https://www.youtube.com/watch?v=CGZR_K4WxV4. He also worked as an Air Brakes Controls Engineer at Terrapin Rockets in Maryland, USA, where he simulated and developed a custom controller design for a high-powered sounding rocket air brake system.
+
+Aditya can be contacted at (240) 580-4460 or aditya97@terpmail.umd.edu. More of his work can be found on his GitHub page at github/adityachaugule and his LinkedIn profile at in/adityachaugule.
