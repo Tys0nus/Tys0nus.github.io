@@ -233,13 +233,30 @@ svg {
   transform: translateX(-50%); /* Add this */
   width: 90%; 
   max-width: 600px; 
+  height: 80px;
+  border-radius: 15px;
+  padding: 10px 20px;
+  /* border: 2px solid var(--text); */
+  resize: none;
+  font-size: 1em;
+  margin-bottom: 10px;
+  background-color: transparent;
+  z-index: 1000; /* Add this */
+}
+
+.output-box {
+  position: fixed; /* Add this */
+  bottom: calc(0px); /* Add this - adjust as needed */
+  left: 50%; /* Add this */
+  transform: translateX(-50%); /* Add this */
+  width: 100%; 
+  max-width: 600px; 
   height: 50px;
   border-radius: 15px;
   padding: 10px 20px;
   border: 2px solid var(--text);
   resize: none;
   font-size: 1em;
-  margin-bottom: 10px;
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 1000; /* Add this */
 }

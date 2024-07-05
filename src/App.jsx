@@ -18,6 +18,8 @@ function App() {
   const [context, setContext] = useState('');
   const [output, setOutput] = useState('');
 
+  const [score, setScore] = useState(null);
+
   const worker = useRef(null);
 
   useEffect(() => {
@@ -72,6 +74,7 @@ function App() {
           break;
         case 'complete':
           setOutput(e.data.output);  // Ensure the output state is updated
+          setScore(e.data.score);
           setDisabled(false);
           break;
         case 'error':
@@ -137,7 +140,14 @@ function App() {
           </div>
       </div>
 
-      <textarea className="output" value={output} rows={2} readOnly placeholder="Electra on standby... Fire away your questions or try a sample query!"></textarea>
+      <div className="output">
+      {score !== null && ( // Conditionally render the score
+        <div className="accuracy-score" style={{ position: 'fixed', top: '10px', right: '10px', color: 'white' }}>
+          Accuracy: {Math.round(score * 100)}%
+        </div>
+      )}  
+      <textarea className="output-box" value={output} rows={2} readOnly placeholder="Electra on standby... Fire away your questions or try a sample query!"></textarea>
+      </div>
 
       <div className="chat-container">
               <div className="input-container">
