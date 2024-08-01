@@ -134,6 +134,7 @@ function App() {
               <img className="profile-pic" alt="Aditya Chaugule" src="/images/pic.jpg" />
           </div>
           <div className="buttons">
+              <a href="https://drive.google.com/file/d/1E_SWqaDaIXIoUb0OtXxWPoBxE9UlyPwc/view?usp=drive_link" target="_blank"><i class="fas fa-briefcase"></i> Portfolio</a>
               <a href="https://www.linkedin.com/in/adityachaugule" target="_blank"><i className="fab fa-linkedin"></i> adityachaugule</a>
               <a href="https://github.com/Tys0nus" target="_blank"><i className="fab fa-github"></i> Tys0nus</a>
               <a href="mailto:aditya97@terpmail.umd.edu"><i className="fas fa-envelope"></i> Email</a>
